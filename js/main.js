@@ -54,7 +54,6 @@ function notAuthorized() {
     if (login === '') {
       alert ('Логин не может быть пустым');
       toggleModalAuth();
-      login = logInInput.value;
     };
     
     localStorage.setItem('deliveryFood', login);

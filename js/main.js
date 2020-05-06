@@ -55,7 +55,7 @@ function notAuthorized() {
 
     login = logInInput.value;
 
-    if (login === '') {
+    if (!login) {
       alert ('Логин не может быть пустым');
       toggleModalAuth();
     }
@@ -143,7 +143,7 @@ function openGood(event) {
   const target = event.target;
   const restaurant = target.closest('.card-restaurant')
 
-  if (restaurant && login !== null) {
+  if (restaurant && login) {
     containerPromo.classList.add('hide');
     restaurants.classList.add('hide');
     menu.classList.remove('hide');

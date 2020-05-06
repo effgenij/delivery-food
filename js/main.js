@@ -83,8 +83,6 @@ function checkAuth() {
   }
 }
 
-checkAuth();
-
 function createCardRestaurant() {
   const card = `
     <a class="card card-restaurant">
@@ -107,10 +105,6 @@ function createCardRestaurant() {
 
   cardsRestaurants.insertAdjacentHTML('beforeend', card);
 }
-
-createCardRestaurant();
-createCardRestaurant();
-createCardRestaurant();
 
 function createCardGood() {
   const card = document.createElement('div');
@@ -165,4 +159,15 @@ logo.addEventListener('click', function() {
   containerPromo.classList.remove('hide');
   restaurants.classList.remove('hide');
   menu.classList.add('hide');
+})
+
+checkAuth();
+
+createCardRestaurant();
+createCardRestaurant();
+createCardRestaurant();
+
+new Swiper('.swiper-container', {
+  loop: true,
+  autoplay: true
 })
